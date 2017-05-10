@@ -1,0 +1,129 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+	<head>
+		<title>Recipe Book</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="quizcss.css">
+		
+	</head>
+	<body background="Signupbg2.jpg">
+	<div class="design">
+		<br><br><br>
+		<table align="center" width="75%" bgcolor="white" border="0" fillborder="purple">
+		<tr>
+		<td align="center">
+					<center><img src="logo1.png"></center><br><hr>
+				<?php
+				echo "Hello" . $_SESSION["user"] . ".";
+				?>	
+			<font size="5">
+			<a href="home1.html"><b>Home</b></a> &nbsp; &nbsp; &nbsp; 
+			<a href="Signupnew.html" target="_self"><b>Signup</b></a> &nbsp; &nbsp; &nbsp;
+			<a href="login.html" target="_self"s><b>Login</b></a> &nbsp; &nbsp; &nbsp;
+			<a href="people.html" target="_self"><b>About</b></a> &nbsp; &nbsp; &nbsp; 
+			<a href="contact.html" target="_self"><b>Contact</b></a>
+			</font>
+			<hr>
+			<br>
+			<!--content-->
+
+<head>
+<title>Recipes</title>
+</head>
+<body>
+<header>
+</img>
+<br>
+<br></a>
+</header>
+<a name="TOP"></a>
+<h1 align="center"><font face="Kristen ITC" size="5" color="purple"><b>View our Original recipes from the top Masterchefs</b></font></h1>
+<h1 align="center"><font face="Kristen ITC" size="5" color="purple"><b>Also you can order these dishes online</b></font></h1>
+<br><br>
+<h1 align="center"><font face="Kristen ITC" size="7" color="purple"><b><u>Menu</u></b></font></h1>  
+
+<br><br>
+<p align="center"><font face="Kristen ITC" size="6" color="purple"><b><u>Starters</u></b></font></p>
+<table border="0" cellpadding="10" width="100%">
+<tr>
+<td>
+<font size="4" face="tahoma">
+<font size="4" face="tahoma" color="green"><b>Wild Rice Stuffed Acorn Squash</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 150</del>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.120</ins></b><br><font face="Kristen ITC" color="purple">Click on the below image for the recipe</font>
+ <br>
+<a href="wrsas.html"><img src="wrsas.jpg" alt="Wild Rice Stuffed Acorn Squash" width="300" height="200"></img></a><br><input type="submit" value="Order now!">
+</td>
+<td>
+<font size="4" face="tahoma" color="green"><b>Garlicky Mushroom Toast Cups</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 160</del> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.115</ins></b><br><font face="Kristen ITC" color="purple"><b>Click on the below image for the recipe</b></font>
+ <br>
+<a href="gmtc.html"><img src="gmtc.jpg" alt="Garlicky Mushroom Toast Cups" width="300" height="200"></img></a><br>
+<input type="submit" value="Order now!">
+</td>
+</tr>
+<tr>
+<td>
+<font size="4" face="tahoma">
+<font size="4" face="tahoma" color="green"><b>Aloo Tikka</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 180</del>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.130</ins></b><br><font face="Kristen ITC" color="purple">Click on the below image for the recipe</font>
+ <br>
+<a href="atr.html"><img src="atr.jpg" alt="Aloo Tikka" width="300" height="200"></img></a><br><button  onclick="location.href='atrorder.html'">order now</button>
+</td>
+<td>
+<font size="4" face="tahoma" color="green"><b>Aloo and Paneer Roll</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 150</del> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.105</ins></b><br><font face="Kristen ITC" color="purple"><b>Click on the below image for the recipe</b></font>
+ <br>
+<a href="apr.html"><img src="apr.jpg" alt="Aloo and Paneer Roll" width="300" height="200"></img></a><br>
+<input type="submit" value="Order now!">
+</td>
+</tr>
+</table>
+
+<br><br><br>
+<p align="center"><font face="Kristen ITC" size="6" color="purple"><b><u>Main Course</u></b></font></p><br><br>
+<table border="0" cellpadding="10" width="100%">
+<tr>
+<td>
+<font size="4" face="tahoma">
+<font size="4" face="tahoma" color="green"><b>Beef Shish Kebabs for Freezer</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 250</del>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.220</ins></b><br><font face="Kristen ITC" color="purple">Click on the below image for the recipe</font>
+ <br>
+<a href="bsk.html"><img src="bsk.jpg" alt="Beef Shish Kebabs for Freezer" width="300" height="200"></img></a><br><input type="submit" value="Order now!">
+</td>
+<td>
+<font size="4" face="tahoma" color="green"><b>Aloo Gobi Ka Pulao</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 260</del> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.315</ins></b><br><font face="Kristen ITC" color="purple"><b>Click on the below image for the recipe</b></font>
+ <br>
+<a href="abpr.html"><img src="abpr.jpg" alt="Aloo Gobi Ka Pulao" width="300" height="200"></img></a><br>
+<input type="submit" value="Order now!">
+</td>
+</tr>
+</table>
+<br><br><br>
+<p align="center"><font face="Kristen ITC" size="6" color="purple"><b><u>Desserts</u></b></font></p><br><br><br>
+<table border="0" cellpadding="10" width="100%">
+<tr>
+<td>
+<font size="4" face="tahoma">
+<font size="4" face="tahoma" color="green"><b>Cheesecake Recipe</b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 150</del>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.120</ins></b><br><font face="Kristen ITC" color="purple">Click on the below image for the recipe</font>
+ <br>
+<a href="chescak.html"><img src="chescak.jpg" alt="Cheesecake Recipe" width="300" height="200"></img></a><br><input type="submit" value="Order now!">
+</td>
+<td>
+<font size="4" face="tahoma" color="green"><b>Gulab Jamun </b></font><br><font face="Comic sans MS" color="red"><b>Now for <del>Rs. 120</del> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Rs.95</ins></b><br><font face="Kristen ITC" color="purple"><b>Click on the below image for the recipe</b></font>
+ <br>
+<a href="gj.html"><img src="gj.jpg" alt="Gulab Jamun" width="300" height="200"></img></a><br>
+<input type="submit" value="Order now!">
+</td>
+</tr>
+</table>
+<a href="#TOP">Go to Top</a>
+<br><br><br>
+<p align="center"><font face="Kristen ITC" color="purple" size="3"><b><u>Page.....</u></b></font>1&nbsp;&nbsp;<a href="2.html">2</a>&nbsp;&nbsp;<a href="3.html">3</a>&nbsp;&nbsp;<a href="4.html">4</a>&nbsp;&nbsp;<a href="5.html">5</a>
+</body>
+</html>

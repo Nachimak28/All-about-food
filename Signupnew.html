@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+	<head>
+		<title>Signup</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<SCRIPT type="text/javascript">
+	// For jQuery
+	$(document).ready(function(){
+    	$("input").focus(function(){
+        $(this).css("background-color", "#f9e6ff");
+    	});
+    	$("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    	});
+	});
+
+function validate()
+{
+	var Fname=document.getElementById("Fname");
+	if(Fname.value==null || Fname.value=="")
+	{
+		Fname.focus();
+		alert("Enter valid first name");
+		return false;
+	}
+	var Lname=document.getElementById("Lname");
+	if(Lname.value==null || Lname.value=="")
+	{
+		Lname.focus();
+		alert("Enter valid last name");
+		return false;
+	}
+	if(Fname.value.match(alphaExp)){}
+	else{
+		alert("First name can have only letters");
+		Fname.focus();
+		return false;
+	}
+	if(Lname.value.match(alphaExp)){}
+	else{
+		alert("Last name can have only letters");
+		Lname.focus();
+		return false;
+	}
+	
+	var psd=document.getElementById("psd");
+	var repsd=document.getElementById("repsd");
+	var alphaExp = /^[a-zA-Z]+$/;
+	var rGender = document.getElementsByName("rGender");
+			var isGenderSel = false;
+			for(i=0;i<rGender.length;i++)
+			{
+			 isGenderSel = rGender[i].checked;
+			 if(rGender[i].checked)
+			 {
+			 break;
+			 }
+			}
+			if(!isGenderSel)
+			{
+			   alert("Select Gender");
+			   return false;
+			}
+
+	var address=document.getElementById("address");
+	if(address.value==" " || address.value=="")
+	{
+		alert("Please Enter Your address");
+		address.focus();
+		return false;
+	}
+	var contact=document.getElementById("contact");
+	if(contact.value==null || contact.value==" ")
+	{
+		alert("Please Enter Contact Number");
+		contact.focus();
+		return false;
+	}
+	if (isNaN(contact.value))
+	{
+		alert(" Your Contact Number must be Integers");
+		contact.focus();
+		return false;
+	}
+	if((contact.value.length!= 10))
+	{
+		alert("Enter the valid Contact Number(Example : 9XXXXXXXX9)");
+		contact.focus();
+		return false;
+	}
+	var EmailId=document.getElementById("email");
+	var atpos = EmailId.value.indexOf("@");
+    var dotpos = EmailId.value.lastIndexOf(".");
+	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=EmailId.value.length) 
+	{
+        alert("Enter valid email-ID");
+		EmailId.focus();
+        return false;
+   	}
+	
+	
+	if(psd.value.length< 8 || repsd.value.length< 8)
+	{
+		alert("Please enter a password of atleast 8 characters");
+		psd.focus();
+		return false;
+	}
+	else if (psd.value.length != repsd.value.length) 
+	{
+		alert("Passwords do not match.");
+		psd.focus();
+        return false;
+    }
+	else if (psd.value != repsd.value) 
+	{
+		alert("Passwords do not match.");
+		psd.focus();
+        return false;
+    }
+	
+	
+	if (confirm("Do you want to submit your details?") == true) {} 
+	else 
+	{
+       return false;
+    }
+    var poll=prompt("Please post some suggestions about out website.Help us get better.Your reviews are very useful to us....");
+	return true;
+}
+</SCRIPT>
+</head>
+<body background="Signupbg2.jpg">
+<br><br><br>
+<table align="center" width="75%" bgcolor="white" border="0" fillborder="purple">
+<tr>
+<td align="center">
+<center><img src="mainlogo1.png" height="130" width="130">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo1.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="mainlogo1.png" height="130" width="130"></center><br><hr>
+<font size="5">
+<a href="home1.html"><b>Home</b></a> &nbsp; &nbsp; &nbsp; 
+<a href="Signupnew.html" target="_self"><b>Signup</b></a> &nbsp; &nbsp; &nbsp;
+<a href="Login.html" target="_self"s><b>Login</b></a> &nbsp; &nbsp; &nbsp;
+<a href="people.html" target="_self"><b>About</b></a> &nbsp; &nbsp; &nbsp; 
+<a href="contact.html" target="_self"><b>Contact</b></a>
+</font>
+<hr>
+<br>
+<!--content-->
+<marquee><font face="Calibri" size="+1" color="purple">Sign Up and get upto 50% discount on your first order</marquee>
+<table border="0" width="100%" height="80%">
+<td align="center">
+<h1 align="center"><font color="purple" face="Lucida Handwriting">
+<b><img src="signup1.png" height="170" width="170">
+</b>
+</font></h1>
+<form name="f1" id="f1" onsubmit="return validate()" method="post" action="Signupnew.php">
+<table border="2" cellpadding=5>
+<tr>
+<td>	<font color="purple">  First Name:	</font>	</td>
+<TD><INPUT name="Fname" type="TEXT" placeholder="Enter your first name" size="30" maxlength="30" align="center" id="Fname"></TD>
+</tr>
+<tr>
+<td><font color="purple">  Last Name:	</font>	</td>
+<td><INPUT type="TEXT" name="Lname" align="center" size="30" maxlength="30" placeholder="Enter your last name" id="Lname"></TD>
+</tr>
+<tr>
+<td>	<font color="purple">Gender:	</font>	</td>
+<td>	<input type="radio" name="rGender" id="r1" value="Male">	<font color="purple">	Male	</font>	<br>
+<input type="radio" name="rGender" id="r2" value="Female">	<font color="purple">	Female	</font>	<br>	</td>
+</tr>
+<tr>
+<td><font color="purple">Date of Birth:</font>	</td>
+<td><input type="date" name="signupdttim">	</td>
+</tr>
+
+<TR >
+<TD><font color="purple">Address:</FONT></TD>
+<TD class="left"><TEXTAREA rows="7" cols="33" wrap="physical" placeholder="Enter your address" id="address" name="address"></TEXTAREA></TD>
+</TR>
+<TR>
+<TD><font color="purple">Contact Number:</FONT></TD>
+<TD><INPUT type="TEXT" name="contact" size="30" maxlength="10" placeholder="XXXXXXXXXX" id="contact"></TD>
+</TR>
+<TR>
+<TD><font color="purple">E-Mail ID:</FONT></TD>
+<TD><INPUT name="email" type="TEXT" name="email" id="email" placeholder="mysupermail@mail.com" size="30" maxlength="30"></TD>
+</TR>
+<TR>
+<TD><font color="purple">Password:</FONT></TD>
+<TD><INPUT type="PASSWORD" name="psd" size="30"  id="psd" placeholder="eg. X8df!90E0"></TD>
+</TR>
+<TR>
+<TD><font color="purple">Confirm Password:</FONT></TD>
+<TD><INPUT type="PASSWORD" name="repsd" size="30" id="repsd" placeholder="eg. X8df!90E0"></TD>
+</TR>
+<tr>
+<td><font color="purple">What would you like to have ???</font></td>
+<td>
+<input type="checkbox" name="Vegetarian" id="food" value="Vegetarian"><font color="purple">Vegetarian</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="checkbox" name="Non-Vegetarian" id="food" value="Non-Vegetarian"><font color="purple">Non-Vegetarian</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="checkbox" name="Vegan" id="food" value="Vegan"><font color="purple">Vegan</font>
+</td></tr></TABLE>
+
+<p align="center">
+<INPUT type="checkbox" name="tc" value="tc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Agree to the terms and policies and continue </FONT><br>
+<INPUT TYPE="Submit" value="Submit" id="button" onclick="if(!this.form.tc.checked){alert('You must agree to the terms first.');return false}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></p>
+
+</form>
+<a href="Login.html"><font face="tahoma" size="+2" color="purple">All ready Registered!!!!<br>Login</font></a>
+</tr>
+</table>
+<!--Footer Content -->
+<footer>
+<table width="75%" align="center" bgcolor="white" border="0">
+<tr>
+<td align="center" colspan="3">		<font face="Kristen ITC" color="purple" size="3">	Follow us on:	<br>	</font>	</td>	
+</tr>
+<tr>
+<td colspan="3" align="center">	
+<a href="https://www.facebook.com/"><img src="fb.png" width="50" height="50">	</img></a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://www.instagram.com"><img src="insta.png" width="50" height="50"></img></a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://twitter.com"><img src="twitter.png" width="50" height="50"></img></a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="www.stumbleupon.com"><img src="stumbleupon.png" width="50" height="50"></img></a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://www.reddit.com"><img src="reddit.jpg" width="50" height="50"></img></a> &nbsp;&nbsp;&nbsp;&nbsp;
+</tr>
+</table>
+</footer>
+</body>
+</html>
+
+

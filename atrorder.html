@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+	<head>
+		<title>Recipe Book</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	
+		
+		<link rel="stylesheet" type="text/css" href="quizcss.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script type="text/javascript">
+	// For jQuery
+	$(document).ready(function(){
+    	$("input").focus(function(){
+        $(this).css("background-color", "#f9e6ff");
+    	});
+    	$("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    	});
+	});
+		function validate(){
+//var name = prompt('Enter name');
+//var multiplier = prompt('Enter quantity');
+var name=document.getElementById("username");
+	if(name.value==null || name.value=="")
+	{
+		Fname.focus();
+		alert("Enter valid username");
+		return false;
+	}
+	}
+	function buy(){
+var name = prompt("Name")
+var multiplier=prompt("quantity")
+multiplier = parseInt(multiplier);
+var address  = prompt("Address")
+
+var d = new Date();
+var n = d.getTime();
+var final_bill = multiplier*130
+var doc = new jsPDF();
+doc.setFontSize(22);	
+
+doc.setFontSize(16);
+doc.text(20, 30, 'Name: ' + name+'                                                                                  '+n);
+doc.text(20, 40, 'Address: ' + address);
+
+doc.text(20,50,'Your order summary');
+doc.text(20,60,'Item                                                                                                  Qty');
+doc.text(20,70,'---------------------------------------------------------------------------------------------------------');
+doc.text(20,80,'Aloo tikka                                                                                           '+multiplier);
+doc.text(20,90,'---------------------------------------------------------------------------------------------------------');
+doc.text(20,100,'Total                                                                                                    '+final_bill);
+doc.save('order.pdf');}
+    </script>
+
+	</head>
+	<body background="Signupbg2.jpg">
+	<div class="design">
+		<br><br><br>
+		<table align="center" width="75%" bgcolor="white" border="0" fillborder="purple">
+		<tr>
+		<td align="center">
+					<center><img src="logo1.png"></center><br><hr>
+					<?php
+					echo "Welcome nachimak28@gmail.com"
+					?>
+
+			<font size="5">
+			<a href="home1.html"><b>Home</b></a> &nbsp; &nbsp; &nbsp; 
+			<a href="Signupnew.html" target="_self"><b>Signup</b></a> &nbsp; &nbsp; &nbsp;
+			<a href="Login.html" target="_self"s><b>Login</b></a> &nbsp; &nbsp; &nbsp;
+			<a href="people.html" target="_self"><b>About</b></a> &nbsp; &nbsp; &nbsp; 
+			<a href="contact.html" target="_self"><b>Contact</b></a>
+			</font>
+			<hr>
+			<br>
+			<!--content-->
+
+<head>
+<title>Recipes</title>
+</head>
+<body>
+<header>
+</img>
+<br>
+<br></a>
+</header>
+<a name="TOP"></a>
+<h1 align="center"><font face="Kristen ITC" size="5" color="purple"><b>Aloo Tikka</b></font></h1>
+<br><br>
+<table width = 100% >
+<tr>
+<td align = "center">
+<img src="atr.jpg" alt="Aloo Tikka" width="75%" height="75%"></img>
+</td></tr>
+<tr>
+<td align = "center"> <br><br><hr><br><font face="Comic sans MS" color="red" size=6><b>Now for <del>Rs. 180</del>
+ <ins>Rs.130</ins></b>
+ </td></tr>
+ 
+ <tr>
+ <td align = "center"><button  onclick="buy()">order now</button></td></tr>
+
+	
+
+ </table>
+
+ 
+ </body>
+ </html>
